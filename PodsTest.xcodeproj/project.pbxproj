@@ -18,6 +18,9 @@
 		653D1C8318105ACA009E40DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 653D1C8218105ACA009E40DC /* Default-568h@2x.png */; };
 		653D1C8618105ACA009E40DC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653D1C8418105ACA009E40DC /* MainStoryboard.storyboard */; };
 		653D1C8918105ACA009E40DC /* LSCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D1C8818105ACA009E40DC /* LSCViewController.m */; };
+		653D1C901810717D009E40DC /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 653D1C8F1810717D009E40DC /* placeholder.png */; };
+		653D1C9318107594009E40DC /* LSCTraktAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D1C9218107594009E40DC /* LSCTraktAPIClient.m */; };
+		A0BE1486111547248D680E02 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5B4BFBCC9D45A0B5169B4C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		653D1C8518105ACA009E40DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		653D1C8718105ACA009E40DC /* LSCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCViewController.h; sourceTree = "<group>"; };
 		653D1C8818105ACA009E40DC /* LSCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCViewController.m; sourceTree = "<group>"; };
+		653D1C8F1810717D009E40DC /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = SOURCE_ROOT; };
+		653D1C9118107594009E40DC /* LSCTraktAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCTraktAPIClient.h; sourceTree = "<group>"; };
+		653D1C9218107594009E40DC /* LSCTraktAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCTraktAPIClient.m; sourceTree = "<group>"; };
+		B50E2CE43CD74365A211C1A0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DC5B4BFBCC9D45A0B5169B4C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 				653D1C6D18105ACA009E40DC /* UIKit.framework in Frameworks */,
 				653D1C6F18105ACA009E40DC /* Foundation.framework in Frameworks */,
 				653D1C7118105ACA009E40DC /* CoreGraphics.framework in Frameworks */,
+				A0BE1486111547248D680E02 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +68,7 @@
 				653D1C7218105ACA009E40DC /* PodsTest */,
 				653D1C6B18105ACA009E40DC /* Frameworks */,
 				653D1C6A18105ACA009E40DC /* Products */,
+				B50E2CE43CD74365A211C1A0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +86,7 @@
 				653D1C6C18105ACA009E40DC /* UIKit.framework */,
 				653D1C6E18105ACA009E40DC /* Foundation.framework */,
 				653D1C7018105ACA009E40DC /* CoreGraphics.framework */,
+				DC5B4BFBCC9D45A0B5169B4C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,12 +94,15 @@
 		653D1C7218105ACA009E40DC /* PodsTest */ = {
 			isa = PBXGroup;
 			children = (
+				653D1C8F1810717D009E40DC /* placeholder.png */,
 				653D1C7B18105ACA009E40DC /* LSCAppDelegate.h */,
 				653D1C7C18105ACA009E40DC /* LSCAppDelegate.m */,
 				653D1C8418105ACA009E40DC /* MainStoryboard.storyboard */,
 				653D1C8718105ACA009E40DC /* LSCViewController.h */,
 				653D1C8818105ACA009E40DC /* LSCViewController.m */,
 				653D1C7318105ACA009E40DC /* Supporting Files */,
+				653D1C9118107594009E40DC /* LSCTraktAPIClient.h */,
+				653D1C9218107594009E40DC /* LSCTraktAPIClient.m */,
 			);
 			path = PodsTest;
 			sourceTree = "<group>";
@@ -114,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653D1C8C18105ACA009E40DC /* Build configuration list for PBXNativeTarget "PodsTest" */;
 			buildPhases = (
+				B6607213405A457C99F1BDE7 /* Check Pods Manifest.lock */,
 				653D1C6518105ACA009E40DC /* Sources */,
 				653D1C6618105ACA009E40DC /* Frameworks */,
 				653D1C6718105ACA009E40DC /* Resources */,
+				E577370C95CD46F0B4854DC4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,10 +180,44 @@
 				653D1C8118105ACA009E40DC /* Default@2x.png in Resources */,
 				653D1C8318105ACA009E40DC /* Default-568h@2x.png in Resources */,
 				653D1C8618105ACA009E40DC /* MainStoryboard.storyboard in Resources */,
+				653D1C901810717D009E40DC /* placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6607213405A457C99F1BDE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E577370C95CD46F0B4854DC4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		653D1C6518105ACA009E40DC /* Sources */ = {
@@ -177,6 +227,7 @@
 				653D1C7918105ACA009E40DC /* main.m in Sources */,
 				653D1C7D18105ACA009E40DC /* LSCAppDelegate.m in Sources */,
 				653D1C8918105ACA009E40DC /* LSCViewController.m in Sources */,
+				653D1C9318107594009E40DC /* LSCTraktAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +311,7 @@
 		};
 		653D1C8D18105ACA009E40DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50E2CE43CD74365A211C1A0 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PodsTest/PodsTest-Prefix.pch";
@@ -271,6 +323,7 @@
 		};
 		653D1C8E18105ACA009E40DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50E2CE43CD74365A211C1A0 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PodsTest/PodsTest-Prefix.pch";
@@ -299,6 +352,7 @@
 				653D1C8E18105ACA009E40DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

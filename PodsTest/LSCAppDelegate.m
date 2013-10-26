@@ -7,12 +7,14 @@
 //
 
 #import "LSCAppDelegate.h"
+#import <AFNetworking.h>
 
 @implementation LSCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES; //enables the automatic network activity indication manager
     return YES;
 }
 							

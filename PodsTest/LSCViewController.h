@@ -10,4 +10,10 @@
 
 @interface LSCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *showsScrollView;
+
+@property (weak, nonatomic) IBOutlet UIPageControl *showPageControl;
+
+- (IBAction)pageChanged:(id)sender;
+
 @end
